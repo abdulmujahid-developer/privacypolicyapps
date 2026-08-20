@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Device Info</title>
+    <title>Privacy Policy - Device Info By Mujahid</title>
     <style>
         :root {
             --bg-color: #ffffff;
@@ -113,8 +113,8 @@
 <body>
 
 <div class="container">
-    <h1 id="app-title">Device Info</h1>
-    <div class="developer-name">Developed by: Abdul Mujahid</div>
+    <h1 id="app-title">Device Info By Mujahid - Privacy Policy</h1>
+    <div class="developer-name">Developer & Provider: Abdul Mujahid</div>
 
     <!-- Navigation Tabs -->
     <div class="tabs">
@@ -130,19 +130,25 @@
         </div>
         <div class="policy-point">
             <strong>2. No Advertisement</strong>
-            Enjoy a completely clean user experience without any banners, native, or interstitial ads.
+            Enjoy a completely clean user experience with no banner, native, or interstitial ads.
         </div>
         <div class="policy-point">
             <strong>3. Local Processing</strong>
-            All system information and diagnostics are processed entirely offline on your device.
+            All system information and diagnostics are processed fully offline on your device.
         </div>
         <div class="policy-point">
             <strong>4. Secure & Transparent</strong>
-            No data is shared with third parties or external servers.
+            No data is ever shared with third parties or external servers.
         </div>
         <div class="policy-point">
             <strong>5. Camera Permission</strong>
-            The camera permission is strictly used to read technical hardware capabilities of your lens. We never capture photos or videos in the background.
+            Camera permission is strictly used to read the technical hardware capabilities of your lens. We never capture photos or record videos in the background.
+        </div>
+        <div class="policy-point">
+            <strong>6. App & Developer Info</strong>
+            App Name: Device Info By Mujahid<br>
+            Developer & Provider: Abdul Mujahid<br>
+            Contact Us: abdulmujahidpersonal@gmail.com
         </div>
     </div>
 
@@ -150,23 +156,29 @@
     <div id="content-zh" class="policy-content">
         <div class="policy-point">
             <strong>1. 数据隐私</strong>
-            我们重视您的隐私。本应用不会收集、存储或传输任何个人数据。
+            我们重视您的隐私。本应用不收集、存储或传输任何个人数据。
         </div>
         <div class="policy-point">
             <strong>2. 无广告</strong>
-            享受干净的用户体验，没有任何横幅、原生或插屏广告。
+            享受完全干净的用户体验，无横幅广告、原生广告或插屏广告。
         </div>
         <div class="policy-point">
             <strong>3. 本地处理</strong>
-            所有系统信息和诊断完全在您的设备上离线处理。
+            所有系统信息和诊断均完全在您的设备上离线处理。
         </div>
         <div class="policy-point">
             <strong>4. 安全透明</strong>
-            绝不会与第三方或外部服务器共享任何数据。
+            绝不与第三方或外部服务器共享任何数据。
         </div>
         <div class="policy-point">
             <strong>5. 相机权限</strong>
-            相机权限严格且仅用于读取镜头硬件的技术参数。我们绝不会在后台拍摄照片或录制视频。
+            相机权限严格仅用于读取镜头硬件的技术功能。我们绝不会在后台拍摄照片或录制视频。
+        </div>
+        <div class="policy-point">
+            <strong>6. 应用与开发者信息</strong>
+            应用名称：Device Info By Mujahid<br>
+            开发者与提供商：Abdul Mujahid<br>
+            联系方式：abdulmujahidpersonal@gmail.com
         </div>
     </div>
 
@@ -189,9 +201,9 @@
         // Dynamic Title adaptation
         const titleEl = document.getElementById('app-title');
         if (lang === 'zh') {
-            titleEl.innerText = "设备信息 - 隐私政策";
+            titleEl.innerText = "Device Info By Mujahid - 隐私政策";
         } else {
-            titleEl.innerText = "Device Info - Privacy Policy";
+            titleEl.innerText = "Device Info By Mujahid - Privacy Policy";
         }
     }
 
@@ -213,12 +225,12 @@
             console.log("Timezone API not fully supported.");
         }
 
-        // Logic check requested by user
+        // Auto selection logic
         if (isChinaTimezone || (sysLang && (sysLang.startsWith('zh') || sysLang.includes('CN')))) {
             defaultTab = 'zh';
         }
 
-        // Initialize the default matched tab
+        // Initialize default tab
         switchTab(defaultTab);
     }
 
@@ -227,4 +239,5 @@
 </script>
 
 </body>
-</html>
+    </html>
+    
