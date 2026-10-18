@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlRoot">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — ScreenLab - Pixel Testor Pro</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #f5f3f0;
+    color: #1a1a1e;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid #e8e5e1;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  }
+  .brand {
+    font-weight: 700;
+    font-size: 16px;
+    color: #5b6cff;
+    letter-spacing: -0.2px;
+  }
+  .lang-switch {
+    display: flex;
+    gap: 6px;
+    background: #f0ede9;
+    padding: 4px;
+    border-radius: 999px;
+  }
+  .lang-btn {
+    border: none;
+    background: transparent;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #4a4a52;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+  }
+  .lang-btn:hover { color: #1a1a1e; }
+  .lang-btn.active {
+    background: #5b6cff;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(91,108,255,0.35);
+  }
+  .container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+  .header {
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid #e8e5e1;
+  }
+  h1 {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+    color: #1a1a1e;
+  }
+  .subtitle {
+    color: #6a6a72;
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+  .meta {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: #8a8a92;
+  }
+  .meta strong { color: #4a4a52; font-weight: 600; }
+  .intro {
+    background: #fff;
+    border-left: 4px solid #5b6cff;
+    padding: 20px 24px;
+    border-radius: 12px;
+    margin-bottom: 32px;
+    color: #3a3a42;
+    font-size: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 32px;
+    margin-bottom: 12px;
+    color: #1a1a1e;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: #eef0ff;
+    color: #5b6cff;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  p {
+    margin-bottom: 14px;
+    color: #3a3a42;
+  }
+  ul {
+    margin-bottom: 14px;
+    padding-left: 24px;
+  }
+  li {
+    margin-bottom: 8px;
+    color: #3a3a42;
+  }
+  strong { color: #1a1a1e; }
+  a { color: #5b6cff; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
+  a:hover { border-bottom-color: #5b6cff; }
+  .highlight {
+    background: #eef0ff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: "SF Mono", "Monaco", "Consolas", monospace;
+    font-size: 13px;
+    color: #5b6cff;
+  }
+  .callout {
+    background: #f0fdf9;
+    border: 1px solid #b8f0e0;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 16px 0;
+    font-size: 14px;
+    color: #0a5c4a;
+  }
+  .callout strong { color: #0a5c4a; }
+  .footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid #e8e5e1;
+    text-align: center;
+    color: #8a8a92;
+    font-size: 13px;
+  }
+  .footer p { color: #8a8a92; margin-bottom: 6px; }
+  .lang-section { display: none; }
+  .lang-section.visible { display: block; animation: fadeIn 0.3s ease; }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @media (max-width: 600px) {
+    h1 { font-size: 26px; }
+    h2 { font-size: 18px; }
+    .container { padding: 24px 16px 60px; }
+    .top-nav { padding: 10px 14px; }
+    .brand { font-size: 14px; }
+    .lang-btn { padding: 5px 12px; font-size: 12px; }
+    .meta { flex-direction: column; gap: 6px; }
+  }
+  @media print {
+    .top-nav { display: none; }
+    body { background: #fff; }
+    .container { max-width: 100%; padding: 0; }
+    .lang-section { display: block !important; }
+    .lang-section:not(.visible) { display: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="brand">ScreenLab</div>
+  <div class="lang-switch">
+    <button class="lang-btn" id="btnEN" onclick="setLang('en')">English</button>
+    <button class="lang-btn" id="btnZH" onclick="setLang('zh')">中文</button>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- ============ ENGLISH ============ -->
+  <div class="lang-section" id="section-en" lang="en">
+
+    <div class="header">
+      <h1>Privacy Policy</h1>
+      <div class="subtitle">ScreenLab - Pixel Testor Pro</div>
+      <div class="meta">
+        <span><strong>Developer:</strong> Abdul Mujahid</span>
+        <span><strong>Provider:</strong> Abdul Mujahid</span>
+        <span><strong>Last Updated:</strong> October 18, 2026</span>
+      </div>
+    </div>
+
+    <div class="intro">
+      Your privacy is our priority. ScreenLab does not collect, store, transmit, or share any personal information, usage data, or device identifiers. This policy explains exactly what data the app does and does not handle.
+    </div>
+
+    <h2><span class="section-num">1</span> No Data Collection</h2>
+    <p>ScreenLab does <strong>not</strong> collect, store, transmit, or share any personal information, usage data, or device identifiers. There are no accounts, no logins, no cloud sync, and no telemetry of any kind.</p>
+
+    <h2><span class="section-num">2</span> No Internet Access</h2>
+    <p>The app does not request or use internet permission. It runs fully offline. Nothing ever leaves your device. You can verify this yourself by reviewing the app's AndroidManifest permissions on the Play Store listing.</p>
+
+    <h2><span class="section-num">3</span> Local Storage Only</h2>
+    <p>All preferences (theme, language, test colors, durations, haptic strength, favorites, custom colors, and other settings) are stored locally on your device using Android SharedPreferences. Uninstalling the app removes all stored settings completely.</p>
+
+    <h2><span class="section-num">4</span> No Third-Party Services</h2>
+    <p>ScreenLab contains no ads, no analytics, no trackers, no crash reporters, and no third-party SDKs of any kind. The app is built entirely from Android platform libraries and Jetpack Compose.</p>
+
+    <h2><span class="section-num">5</span> Optional Email Feedback</h2>
+    <p>If you tap <strong>Email Us</strong> in the side drawer, your email app opens with our address pre-filled: <span class="highlight">abdulmujahidpersonal@gmail.com</span>. Nothing is sent until you personally press "Send" in your own email app. The email contents are entirely up to you.</p>
+
+    <h2><span class="section-num">6</span> Permissions</h2>
+    <p>ScreenLab requests the following permissions, and only these:</p>
+    <ul>
+      <li><strong>VIBRATE</strong> — used solely to provide haptic feedback during screen tests.</li>
+      <li><strong>ACCESS_NOTIFICATION_POLICY</strong> — used only if you enable the optional "Do Not Disturb during tests" toggle in Settings. This permission silences notifications while a test is running. It is never granted automatically — your system asks for your explicit approval before the feature works.</li>
+    </ul>
+    <div class="callout">
+      <strong>Note:</strong> ScreenLab does not request INTERNET, CAMERA, LOCATION, CONTACTS, MICROPHONE, STORAGE, or any other sensitive permission.
+    </div>
+
+    <h2><span class="section-num">7</span> Children's Privacy</h2>
+    <p>ScreenLab is safe for all ages and does not knowingly collect any information from anyone, including children under 13. Because the app does not collect any data at all, there is nothing to delete, export, or transfer.</p>
+
+    <h2><span class="section-num">8</span> Changes to This Policy</h2>
+    <p>Any future updates to this policy will be reflected on this page and inside the app. Continued use of the app after changes means you accept the updated policy. The "Last Updated" date at the top of this page always reflects the most recent revision.</p>
+
+    <h2><span class="section-num">9</span> Contact</h2>
+    <p>If you have questions about this privacy policy, please contact:</p>
+    <p><strong>Email:</strong> <a href="mailto:abdulmujahidpersonal@gmail.com">abdulmujahidpersonal@gmail.com</a></p>
+
+    <div class="footer">
+      <p><strong>ScreenLab - Pixel Testor Pro</strong></p>
+      <p>By using this app, you agree to this Privacy Policy.</p>
+      <p style="margin-top:12px; opacity:0.7;">© 2026 Abdul Mujahid. All rights reserved.</p>
+    </div>
+
+  </div>
+
+  <!-- ============ 中文 ============ -->
+  <div class="lang-section" id="section-zh" lang="zh-CN">
+
+    <div class="header">
+      <h1>隐私政策</h1>
+      <div class="subtitle">ScreenLab - Pixel Testor Pro</div>
+      <div class="meta">
+        <span><strong>开发者：</strong>Abdul Mujahid</span>
+        <span><strong>提供者：</strong>Abdul Mujahid</span>
+        <span><strong>最后更新：</strong>2026 年 10 月 18 日</span>
+      </div>
+    </div>
+
+    <div class="intro">
+      您的隐私是我们的首要任务。ScreenLab 不收集、不存储、不传输、不共享任何个人信息、使用数据或设备标识符。本政策将详细说明本应用处理与不处理哪些数据。
+    </div>
+
+    <h2><span class="section-num">1</span>不收集任何数据</h2>
+    <p>ScreenLab <strong>不会</strong>收集、存储、传输或共享任何个人信息、使用数据或设备标识符。没有账户、没有登录、没有云同步，也没有任何形式的数据采集。</p>
+
+    <h2><span class="section-num">2</span>无网络访问</h2>
+    <p>本应用不请求或使用网络权限，完全离线运行。任何数据都不会离开您的设备。您可以在 Google Play 商店页面的权限列表中亲自核实。</p>
+
+    <h2><span class="section-num">3</span>仅限本地存储</h2>
+    <p>所有偏好设置（主题、语言、测试颜色、时长、振动强度、收藏夹、自定义颜色及其他设置）均通过 Android SharedPreferences 存储在您的设备本地。卸载应用将彻底删除所有已存储的设置。</p>
+
+    <h2><span class="section-num">4</span>无第三方服务</h2>
+    <p>ScreenLab 不包含任何广告、分析工具、追踪器、崩溃报告器或第三方 SDK。本应用完全基于 Android 平台库和 Jetpack Compose 构建。</p>
+
+    <h2><span class="section-num">5</span>可选的电子邮件反馈</h2>
+    <p>如果您点击侧边抽屉中的 <strong>Email Us</strong>，系统会打开您的邮件应用并预填我们的邮箱地址：<span class="highlight">abdulmujahidpersonal@gmail.com</span>。在您本人于邮件应用中点击「发送」之前，不会发送任何内容。邮件内容完全由您决定。</p>
+
+    <h2><span class="section-num">6</span>权限说明</h2>
+    <p>ScreenLab 仅请求以下权限：</p>
+    <ul>
+      <li><strong>VIBRATE（振动）</strong> — 仅用于在屏幕测试期间提供触觉反馈。</li>
+      <li><strong>ACCESS_NOTIFICATION_POLICY（通知策略访问）</strong> — 仅在您启用了「测试期间勿扰模式」开关时使用。此权限用于在测试运行时静音通知。系统绝不会自动授予此权限 — 需要您明确批准后功能才会生效。</li>
+    </ul>
+    <div class="callout">
+      <strong>注意：</strong>ScreenLab 不请求 INTERNET、CAMERA、LOCATION、CONTACTS、MICROPHONE、STORAGE 或任何其他敏感权限。
+    </div>
+
+    <h2><span class="section-num">7</span>儿童隐私</h2>
+    <p>ScreenLab 适合所有年龄段使用，不会有意收集任何人的信息，包括 13 岁以下的儿童。由于本应用完全不收集任何数据，因此没有需要删除、导出或传输的信息。</p>
+
+    <h2><span class="section-num">8</span>政策变更</h2>
+    <p>本政策的任何未来更新都会在本页面及应用内反映。变更后继续使用应用即表示您接受更新后的政策。页面顶部的「最后更新」日期始终反映最新修订版本。</p>
+
+    <h2><span class="section-num">9</span>联系我们</h2>
+    <p>如对本隐私政策有任何疑问，请联系：</p>
+    <p><strong>电子邮箱：</strong><a href="mailto:abdulmujahidpersonal@gmail.com">abdulmujahidpersonal@gmail.com</a></p>
+
+    <div class="footer">
+      <p><strong>ScreenLab - Pixel Testor Pro</strong></p>
+      <p>使用本应用即表示您同意本隐私政策。</p>
+      <p style="margin-top:12px; opacity:0.7;">© 2026 Abdul Mujahid. 保留所有权利。</p>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+(function () {
+  function detectLang() {
+    // 1) URL param override: ?lang=zh or ?lang=en
+    try {
+      var params = new URLSearchParams(window.location.search);
+      var urlLang = params.get('lang');
+      if (urlLang === 'zh' || urlLang === 'en') return urlLang;
+    } catch (e) {}
+
+    // 2) Browser language
+    var nav = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    if (nav.indexOf('zh') === 0) return 'zh';
+
+    // 3) Try to detect from timezone (China / HK / Taiwan / Singapore)
+    try {
+      var tz = (Intl.DateTimeFormat().resolvedOptions().timeZone || '').toLowerCase();
+      if (tz.indexOf('shanghai') >= 0 || tz.indexOf('chongqing') >= 0 ||
+          tz.indexOf('urumqi') >= 0 || tz.indexOf('harbin') >= 0 ||
+          tz.indexOf('hongkong') >= 0 || tz.indexOf('taipei') >= 0 ||
+          tz.indexOf('macau') >= 0 || tz.indexOf('singapore') >= 0) {
+        return 'zh';
+      }
+    } catch (e) {}
+
+    // 4) Default
+    return 'en';
+  }
+
+  function applyLang(lang) {
+    // Toggle sections
+    document.getElementById('section-en').classList.toggle('visible', lang === 'en');
+    document.getElementById('section-zh').classList.toggle('visible', lang === 'zh');
+
+    // Toggle buttons
+    document.getElementById('btnEN').classList.toggle('active', lang === 'en');
+    document.getElementById('btnZH').classList.toggle('active', lang === 'zh');
+
+    // Set html lang attr
+    document.getElementById('htmlRoot').setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
+
+    // Update document title
+    document.title = (lang === 'zh' ? '隐私政策' : 'Privacy Policy') + ' — ScreenLab - Pixel Testor Pro';
+
+    // Persist choice
+    try { localStorage.setItem('screenlab_lang', lang); } catch (e) {}
+  }
+
+  window.setLang = function (lang) {
+    applyLang(lang);
+  };
+
+  // On load: check localStorage → URL → auto-detect
+  var stored = null;
+  try { stored = localStorage.getItem('screenlab_lang'); } catch (e) {}
+  applyLang(stored === 'en' || stored === 'zh' ? stored : detectLang());
+})();
+</script>
+
+</body>
+</html>
