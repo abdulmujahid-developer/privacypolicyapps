@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VoraCam — Privacy Policy</title>
+<meta name="description" content="VoraCam Privacy Policy and Terms of Service">
+<style>
+:root {
+  --primary: #1A5EB8;
+  --primary-light: #D6E3FF;
+  --on-primary-light: #001B3D;
+  --bg: #F7F9FC;
+  --surface: #FFFFFF;
+  --text: #191C20;
+  --text-muted: #5C6068;
+  --border: #DDE3EB;
+  --error: #BA1A1A;
+  --accent-bg: #EBF1FB;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  gap: 12px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--primary);
+  text-decoration: none;
+}
+.brand-logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+.lang-switch {
+  display: flex;
+  background: var(--bg);
+  border-radius: 999px;
+  padding: 3px;
+  border: 1px solid var(--border);
+}
+.lang-btn {
+  border: none;
+  background: transparent;
+  padding: 7px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+.lang-btn.active { background: var(--primary); color: #fff; }
+.lang-btn:hover:not(.active) { color: var(--text); }
+
+.hero { padding: 40px 0 20px; }
+.hero h1 {
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.2;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+.hero .subtitle { color: var(--text-muted); font-size: 15px; }
+
+.summary-card {
+  background: var(--primary-light);
+  color: var(--on-primary-light);
+  padding: 20px;
+  border-radius: 16px;
+  margin: 24px 0 32px;
+}
+.summary-card h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.summary-card p { font-size: 15px; }
+
+.section { margin-bottom: 28px; }
+.section h2 {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+.section p { color: var(--text); font-size: 15px; white-space: pre-line; }
+
+.contact-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 20px;
+  border-radius: 16px;
+  margin: 28px 0;
+}
+.contact-card h2 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+.contact-card dl {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 8px 12px;
+  font-size: 14px;
+}
+.contact-card dt { color: var(--text-muted); font-weight: 600; }
+.contact-card dd { color: var(--text); word-break: break-word; }
+.contact-card a { color: var(--primary); text-decoration: none; font-weight: 600; }
+.contact-card a:hover { text-decoration: underline; }
+
+.divider { height: 1px; background: var(--border); margin: 40px 0 32px; }
+
+.terms-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--error);
+  margin-bottom: 6px;
+  letter-spacing: -0.3px;
+}
+.terms-sub { color: var(--text-muted); font-size: 14px; margin-bottom: 24px; }
+.section.error h2 { color: var(--error); }
+
+footer {
+  margin-top: 48px;
+  padding: 24px 0 40px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+[data-lang] { display: none; }
+html[data-active-lang="en"] [data-lang="en"] { display: block; }
+html[data-active-lang="zh"] [data-lang="zh"] { display: block; }
+html[data-active-lang="en"] span[data-lang="en"],
+html[data-active-lang="zh"] span[data-lang="zh"] { display: inline; }
+
+@media (max-width: 520px) {
+  .hero h1 { font-size: 26px; }
+  .hero { padding: 28px 0 12px; }
+  .contact-card dl { grid-template-columns: 90px 1fr; }
+  .lang-btn { padding: 6px 14px; font-size: 13px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a href="#" class="brand">
+      <span class="brand-logo">VC</span>
+      <span>VoraCam</span>
+    </a>
+    <div class="lang-switch" role="tablist" aria-label="Language">
+      <button class="lang-btn" data-set-lang="en" role="tab">English</button>
+      <button class="lang-btn" data-set-lang="zh" role="tab">中文</button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+<div data-lang="en">
+  <div class="hero">
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">VoraCam</p>
+  </div>
+
+  <div class="summary-card">
+    <h2>Summary</h2>
+    <p>VoraCam does not collect, upload, or share your personal data. All recordings stay on your device in a private app sandbox. Camera and microphone are used only while you are actively recording.</p>
+  </div>
+
+  <div class="section">
+    <h2>1. Data We Collect</h2>
+    <p>We do not collect any personal information. We do not track usage, analytics, or device identifiers. The app works entirely offline.</p>
+  </div>
+
+  <div class="section">
+    <h2>2. Permissions</h2>
+    <p>Camera — required to record video.
+Microphone — required to record audio.
+Notifications — to show recording status while active.
+Overlay — optional, only if you enable the floating preview.
+
+All permissions are used exclusively for the stated purpose.</p>
+  </div>
+
+  <div class="section">
+    <h2>3. Storage &amp; Recordings</h2>
+    <p>All videos are stored in the app's private sandbox directory (/data/data/&lt;package&gt;/files/RecordedVideos/). They are not visible to other apps and are not backed up to any cloud. You can export them to a public folder at any time using the Export action.</p>
+  </div>
+
+  <div class="section">
+    <h2>4. Third Parties</h2>
+    <p>No third-party SDKs, ad networks, or analytics services are embedded in the app. No data leaves your device.</p>
+  </div>
+
+  <div class="section">
+    <h2>5. Children's Privacy</h2>
+    <p>The app does not knowingly collect data from children under 13. Since no data is collected at all, there is no risk of exposure.</p>
+  </div>
+
+  <div class="section">
+    <h2>6. Your Rights</h2>
+    <p>You can delete any recording at any time via the app's Recorded screen. Deleting a video removes it permanently from the sandbox.</p>
+  </div>
+
+  <div class="contact-card">
+    <h2>Contact Us</h2>
+    <dl>
+      <dt>Email</dt>
+      <dd><a href="mailto:abdulmujahidpersonal@gmail.com">abdulmujahidpersonal@gmail.com</a></dd>
+      <dt>Developer</dt>
+      <dd>Abdul Mujahid</dd>
+      <dt>Provider</dt>
+      <dd>Abdul Mujahid</dd>
+    </dl>
+  </div>
+
+  <div class="divider"></div>
+
+  <h2 class="terms-title">Terms of Service</h2>
+  <p class="terms-sub">Please read carefully before using the app.</p>
+
+  <div class="section error">
+    <h2>1. Use at Your Own Risk</h2>
+    <p>The app is provided "as is" without any warranty, express or implied. By using VoraCam you agree to these terms.</p>
+  </div>
+
+  <div class="section error">
+    <h2>2. No Liability</h2>
+    <p>The developer is not liable for any data loss, damage, or misuse arising from the use of this app. Always back up important recordings.</p>
+  </div>
+
+  <div class="section error">
+    <h2>3. Changes</h2>
+    <p>These terms may be updated in future versions. Continued use of the app indicates acceptance of the updated terms.</p>
+  </div>
+</div>
+
+<div data-lang="zh">
+  <div class="hero">
+    <h1>隐私政策</h1>
+    <p class="subtitle">VoraCam</p>
+  </div>
+
+  <div class="summary-card">
+    <h2>摘要</h2>
+    <p>VoraCam 不收集、上传或分享您的个人数据。所有录像均存储在设备上的应用私有沙盒中。相机和麦克风仅在您主动录制时使用。</p>
+  </div>
+
+  <div class="section">
+    <h2>1. 数据收集</h2>
+    <p>我们不收集任何个人信息,不追踪使用情况、分析数据或设备标识符。应用完全离线运行。</p>
+  </div>
+
+  <div class="section">
+    <h2>2. 权限说明</h2>
+    <p>相机 — 录制视频必需。
+麦克风 — 录制音频必需。
+通知 — 录制期间显示状态。
+悬浮窗 — 可选,仅在启用浮动预览时使用。
+
+所有权限均严格用于所述用途。</p>
+  </div>
+
+  <div class="section">
+    <h2>3. 存储与录像</h2>
+    <p>所有视频存储于应用私有沙盒目录 (/data/data/包名/files/RecordedVideos/)。其他应用无法访问,也不会备份到任何云端。您可以随时通过导出功能将视频复制到公共文件夹。</p>
+  </div>
+
+  <div class="section">
+    <h2>4. 第三方</h2>
+    <p>应用未集成任何第三方 SDK、广告网络或分析服务。任何数据都不会离开您的设备。</p>
+  </div>
+
+  <div class="section">
+    <h2>5. 儿童隐私</h2>
+    <p>应用不会有意收集 13 岁以下儿童的数据。由于完全不收集任何数据,因此不存在任何暴露风险。</p>
+  </div>
+
+  <div class="section">
+    <h2>6. 您的权利</h2>
+    <p>您可以随时通过应用的录制界面删除任何录像。删除操作将从沙盒中永久移除该视频。</p>
+  </div>
+
+  <div class="contact-card">
+    <h2>联系我们</h2>
+    <dl>
+      <dt>邮箱</dt>
+      <dd><a href="mailto:abdulmujahidpersonal@gmail.com">abdulmujahidpersonal@gmail.com</a></dd>
+      <dt>开发者</dt>
+      <dd>Abdul Mujahid</dd>
+      <dt>提供方</dt>
+      <dd>Abdul Mujahid</dd>
+    </dl>
+  </div>
+
+  <div class="divider"></div>
+
+  <h2 class="terms-title">服务条款</h2>
+  <p class="terms-sub">请在使用前仔细阅读。</p>
+
+  <div class="section error">
+    <h2>1. 使用风险自负</h2>
+    <p>应用按"原样"提供,不附带任何明示或暗示的保证。使用 VoraCam 即表示您同意这些条款。</p>
+  </div>
+
+  <div class="section error">
+    <h2>2. 免责声明</h2>
+    <p>对于因使用本应用而引起的任何数据丢失、损坏或滥用,开发者概不负责。请务必自行备份重要录像。</p>
+  </div>
+
+  <div class="section error">
+    <h2>3. 条款变更</h2>
+    <p>这些条款可能会在未来版本中更新。继续使用本应用即表示接受更新后的条款。</p>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <div class="container">
+    <span data-lang="en">&copy; Abdul Mujahid. All rights reserved.</span>
+    <span data-lang="zh">&copy; Abdul Mujahid. 保留所有权利。</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var STORAGE_KEY = 'voracam_lang';
+  var html = document.documentElement;
+
+  function isChineseLocale() {
+    var langs = navigator.languages || [];
+    if (navigator.language) langs = [navigator.language].concat(langs);
+    for (var i = 0; i < langs.length; i++) {
+      if (langs[i] && langs[i].toLowerCase().indexOf('zh') === 0) return true;
+    }
+    try {
+      var region = (navigator.language || '').split('-')[1] || '';
+      if (region.toUpperCase() === 'CN' || region.toUpperCase() === 'TW' || region.toUpperCase() === 'HK') return true;
+    } catch (e) {}
+    return false;
+  }
+
+  function setLang(lang) {
+    html.setAttribute('data-active-lang', lang);
+    html.setAttribute('lang', lang);
+    document.querySelectorAll('.lang-btn').forEach(function (btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-set-lang') === lang);
+    });
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+    document.title = lang === 'zh' ? 'VoraCam — 隐私政策' : 'VoraCam — Privacy Policy';
+  }
+
+  function init() {
+    var stored = null;
+    try { stored = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+    if (stored === 'en' || stored === 'zh') setLang(stored);
+    else setLang(isChineseLocale() ? 'zh' : 'en');
+  }
+
+  document.querySelectorAll('.lang-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      setLang(btn.getAttribute('data-set-lang'));
+    });
+  });
+
+  init();
+})();
+</script>
+
+</body>
+</html>
